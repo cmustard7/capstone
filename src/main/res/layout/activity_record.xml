@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#A1D367"
+    tools:context=".RecordActivity">
+
+
+    <!-- 저장 버튼 -->
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:text="버튼을 누르면 녹음이 시작됩니다."
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/startRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClick"
+        android:src="@drawable/baseline_play_arrow_24" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statusTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="저장"
+        android:visibility="gone" /> <!-- 처음에는 숨겨둡니다. -->
+
+    <!-- 재녹음 버튼 -->
+    <Button
+        android:id="@+id/reRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="재녹음"
+        android:visibility="gone" /> <!-- 처음에는 숨겨둡니다. -->
+
+</RelativeLayout>
